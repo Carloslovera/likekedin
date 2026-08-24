@@ -1,0 +1,516 @@
+@import "tailwindcss";
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+  --bg-primary: #080808;
+  --bg-secondary: #101010;
+  --bg-card: #151515;
+  --bg-hover: #1b1b1b;
+
+  --border: #292929;
+  --border-hover: #444444;
+
+  --text-primary: #f5f5f5;
+  --text-secondary: #a3a3a3;
+  --text-muted: #666666;
+
+  --white: #ffffff;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
+
+  background: var(--bg-primary);
+  color: var(--text-primary);
+
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  color: inherit;
+}
+
+
+/* =========================================================
+   HOME
+========================================================= */
+
+.home {
+  width: 100%;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 90px 24px 70px;
+}
+
+.hero-content {
+  max-width: 780px;
+}
+
+.hero-label {
+  display: inline-block;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: var(--text-muted);
+
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 7vw, 76px);
+
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+
+  
+  color: var(#888);
+}
+
+
+.hero p {
+  max-width: 620px;
+
+  margin-top: 28px;
+
+  color: var(--text-secondary);
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-actions {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 42px;
+
+  padding: 0 20px;
+
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--white);
+
+  color: #080808;
+
+  border: 1px solid var(--white);
+}
+
+.btn-primary:hover {
+  background: #dcdcdc;
+
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+
+  color: var(--text-primary);
+
+  border: 1px solid var(--border-hover);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-card);
+
+  border-color: #666;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   BUSCADOR
+========================================================= */
+
+.search-section {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 24px 50px;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+
+  height: 52px;
+
+  padding: 0 20px 0 48px;
+
+  background: var(--bg-secondary);
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  color: var(--text-primary);
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition: border-color 0.2s ease;
+}
+
+.search-box input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-box input:focus {
+  border-color: var(--border-hover);
+}
+
+.search-box span {
+  position: absolute;
+
+  left: 18px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: var(--text-muted);
+
+  font-size: 20px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PROFESIONALES
+========================================================= */
+
+.professionals-section {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 24px 80px;
+}
+
+.section-heading {
+  display: flex;
+
+  align-items: end;
+
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+.section-heading > div > span {
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: var(--text-muted);
+}
+
+.section-heading h2 {
+  margin-top: 8px;
+
+  font-size: 28px;
+
+  letter-spacing: -0.5px;
+
+  color: var(--text-primary);
+}
+
+.section-heading > a {
+  color: var(--text-secondary);
+
+  font-size: 12px;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.section-heading > a:hover {
+  color: var(--white);
+}
+
+
+/* =========================================================
+   GRID DE PROFESIONALES
+========================================================= */
+
+.professionals-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   TECNOLOGIAS
+========================================================= */
+
+.technologies {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 50px 24px 90px;
+
+  border-top: 1px solid var(--border);
+}
+
+.technologies > span {
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: var(--text-muted);
+}
+
+.technology-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 20px;
+}
+
+.technology-list span {
+  padding: 8px 12px;
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 6px;
+
+  color: var(--text-secondary);
+
+  font-size: 12px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.technology-list span:hover {
+  background: var(--bg-hover);
+
+  border-color: var(--border-hover);
+
+  color: var(--text-primary);
+}
+
+
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+@keyframes fadeInUp {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+.profile-card {
+  animation:
+    fadeInUp 0.5s ease-out both;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b2b2b;
+
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .professionals-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding-top: 60px;
+
+    padding-bottom: 50px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+
+    gap: 15px;
+
+    flex-direction: column;
+  }
+
+  .professionals-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .hero,
+  .search-section,
+  .professionals-section,
+  .technologies {
+    padding-left: 16px;
+
+    padding-right: 16px;
+  }
+
+  .hero {
+    padding-top: 45px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+
+    letter-spacing: -1.5px;
+  }
+
+}

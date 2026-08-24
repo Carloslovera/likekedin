@@ -1,0 +1,281 @@
+<nav class="navbar">
+  <div class="navbar-container">
+
+    <!-- Logo -->
+    <a href="/" class="logo">
+      Find<span>Me!</span>
+    </a>
+
+
+
+    <!-- Navegación -->
+    <div class="navigation">
+
+      <a href="/" class="nav-item active">
+        <span class="nav-icon">⌂</span>
+        <span>Inicio</span>
+      </a>
+
+      <a href="/profesionales" class="nav-item">
+        <span class="nav-icon">◉</span>
+        <span>Profesionales</span>
+      </a>
+
+      <!-- Perfil -->
+      <a href="/profesionales/carlos-lovera" class="profile-mini">
+        <div class="profile-avatar">
+          C
+        </div>
+
+        <span>Mi perfil</span>
+      </a>
+
+    </div>
+
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+
+    height: 64px;
+
+    background: rgba(8, 8, 8, 0.92);
+
+    border-bottom: 1px solid #292929;
+
+    backdrop-filter: blur(12px);
+  }
+
+  .navbar-container {
+    max-width: 1200px;
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  /* LOGO */
+
+  .logo {
+    color: #f5f5f5;
+
+    text-decoration: none;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    white-space: nowrap;
+  }
+
+  .logo span {
+    color: #737373;
+  }
+
+  /* BUSCADOR */
+
+  .search-container {
+    position: relative;
+
+    width: 280px;
+  }
+
+  .search-container input {
+    width: 100%;
+
+    height: 38px;
+
+    padding: 0 16px 0 38px;
+
+    background: #151515;
+
+    border: 1px solid #292929;
+
+    border-radius: 8px;
+
+    color: #f5f5f5;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: all 0.2s ease;
+  }
+
+  .search-container input::placeholder {
+    color: #666;
+  }
+
+  .search-container input:focus {
+    border-color: #555;
+
+    background: #191919;
+  }
+
+  .search-icon {
+    position: absolute;
+
+    left: 13px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #737373;
+
+    font-size: 18px;
+
+    pointer-events: none;
+  }
+
+  /* NAVEGACION */
+
+  .navigation {
+    margin-left: auto;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+  }
+
+  .nav-item {
+    position: relative;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 2px;
+
+    color: #737373;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition: color 0.2s ease;
+  }
+
+  .nav-item:hover,
+  .nav-item.active {
+    color: #f5f5f5;
+  }
+
+  .nav-item.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 2px;
+
+    background: #f5f5f5;
+  }
+
+  .nav-icon {
+    font-size: 17px;
+
+    line-height: 1;
+  }
+
+  /* PERFIL */
+
+  .profile-mini {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #a3a3a3;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    padding-left: 18px;
+
+    border-left: 1px solid #292929;
+  }
+
+  .profile-avatar {
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2b2b2b;
+
+    border: 1px solid #444;
+
+    color: #f5f5f5;
+
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .profile-mini:hover {
+    color: #fff;
+  }
+
+  /* RESPONSIVE */
+
+  @media (max-width: 900px) {
+    .search-container {
+      width: 200px;
+    }
+
+    .navigation {
+      gap: 14px;
+    }
+
+    .nav-item span:last-child {
+      display: none;
+    }
+
+    .profile-mini span {
+      display: none;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .navbar-container {
+      padding: 0 16px;
+      gap: 15px;
+    }
+
+    .search-container {
+      flex: 1;
+      width: auto;
+    }
+
+    .navigation {
+      gap: 10px;
+    }
+
+    .profile-mini {
+      padding-left: 10px;
+    }
+  }
+</style>

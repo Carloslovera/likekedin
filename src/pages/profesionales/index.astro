@@ -1,0 +1,470 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import ProfileCard from '../../components/ProfileCard.astro';
+import Footer from '../../components/Footer.astro';
+
+import profesionales from '../../data/profesionales.json';
+---
+
+<Layout title="Profesionales - FindMe!">
+
+  <Navbar />
+
+  <main class="professionals-page">
+
+    <!-- CABECERA -->
+
+    <section class="page-header">
+
+      <div>
+        <span class="page-label">
+          FINDME! NETWORK
+        </span>
+
+        <h1>
+          Profesionales
+        </h1>
+
+        <p>
+          Descubre profesionales, habilidades y
+          experiencia dentro de nuestra red.
+        </p>
+      </div>
+
+      <div class="professional-count">
+        <strong>{profesionales.length}</strong>
+        <span>profesionales</span>
+      </div>
+
+    </section>
+
+
+    <!-- BUSCADOR -->
+
+    <section class="search-section">
+
+      <div class="search-box">
+
+        <span>⌕</span>
+
+        <input
+          type="search"
+          placeholder="Buscar por nombre, cargo o tecnología..."
+          aria-label="Buscar profesionales"
+        />
+
+      </div>
+
+    </section>
+
+
+    <!-- FILTROS -->
+
+    <section class="filters">
+
+      <button class="filter active">
+        Todos
+      </button>
+
+      <button class="filter">
+        Desarrollo
+      </button>
+
+      <button class="filter">
+        Diseño
+      </button>
+
+      <button class="filter">
+        Gestión
+      </button>
+
+      <button class="filter">
+        QA
+      </button>
+
+    </section>
+
+
+    <!-- LISTADO -->
+
+    <section class="professionals-list">
+
+      <div class="list-header">
+
+        <h2>
+          Todos los profesionales
+        </h2>
+
+        <span>
+          {profesionales.length} resultados
+        </span>
+
+      </div>
+
+
+      <div class="professionals-grid">
+
+        {profesionales.map((profesional) => (
+
+          <ProfileCard
+            {...profesional}
+          />
+
+        ))}
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <Footer />
+
+</Layout>
+
+
+<style>
+
+  /* =========================
+     PAGE
+  ========================= */
+
+  .professionals-page {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 55px 24px 80px;
+
+  }
+
+
+  /* =========================
+     HEADER
+  ========================= */
+
+  .page-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 30px;
+
+    margin-bottom: 35px;
+
+  }
+
+  .page-label {
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #666;
+
+  }
+
+  .page-header h1 {
+
+    margin-top: 8px;
+
+    font-size: 42px;
+
+    letter-spacing: -1.5px;
+
+    color: #f5f5f5;
+
+  }
+
+  .page-header p {
+
+    max-width: 550px;
+
+    margin-top: 12px;
+
+    color: #888;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+  }
+
+
+  /* =========================
+     CONTADOR
+  ========================= */
+
+  .professional-count {
+
+    min-width: 120px;
+
+    padding: 16px;
+
+    background: #111;
+
+    border: 1px solid #292929;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+  }
+
+  .professional-count strong {
+
+    display: block;
+
+    font-size: 24px;
+
+    color: #f5f5f5;
+
+  }
+
+  .professional-count span {
+
+    font-size: 10px;
+
+    color: #666;
+
+  }
+
+
+  /* =========================
+     BUSCADOR
+  ========================= */
+
+  .search-section {
+
+    margin-bottom: 16px;
+
+  }
+
+  .search-box {
+
+    position: relative;
+
+  }
+
+  .search-box input {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 18px 0 45px;
+
+    background: #111;
+
+    border: 1px solid #292929;
+
+    border-radius: 8px;
+
+    color: #f5f5f5;
+
+    outline: none;
+
+    font-size: 13px;
+
+  }
+
+  .search-box input::placeholder {
+
+    color: #555;
+
+  }
+
+  .search-box input:focus {
+
+    border-color: #444;
+
+  }
+
+  .search-box span {
+
+    position: absolute;
+
+    left: 16px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #666;
+
+    font-size: 19px;
+
+  }
+
+
+  /* =========================
+     FILTROS
+  ========================= */
+
+  .filters {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 45px;
+
+  }
+
+  .filter {
+
+    padding: 7px 14px;
+
+    border-radius: 20px;
+
+    background: transparent;
+
+    border: 1px solid #292929;
+
+    color: #777;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+  }
+
+  .filter:hover {
+
+    color: #f5f5f5;
+
+    border-color: #555;
+
+  }
+
+  .filter.active {
+
+    background: #f5f5f5;
+
+    color: #080808;
+
+    border-color: #f5f5f5;
+
+  }
+
+
+  /* =========================
+     LISTADO
+  ========================= */
+
+  .list-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+  }
+
+  .list-header h2 {
+
+    font-size: 20px;
+
+    color: #f5f5f5;
+
+  }
+
+  .list-header span {
+
+    font-size: 11px;
+
+    color: #666;
+
+  }
+
+
+  /* =========================
+     GRID
+  ========================= */
+
+  .professionals-grid {
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+  }
+
+
+  /* =========================
+     RESPONSIVE
+  ========================= */
+
+  @media (max-width: 900px) {
+
+    .professionals-grid {
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    }
+
+  }
+
+
+  @media (max-width: 700px) {
+
+    .page-header {
+
+      flex-direction: column;
+
+      align-items: flex-start;
+
+    }
+
+    .professional-count {
+
+      width: 100%;
+
+    }
+
+  }
+
+
+  @media (max-width: 600px) {
+
+    .professionals-grid {
+
+      grid-template-columns: 1fr;
+
+    }
+
+    .professionals-page {
+
+      padding-left: 16px;
+
+      padding-right: 16px;
+
+    }
+
+    .page-header h1 {
+
+      font-size: 34px;
+
+    }
+
+  }
+
+</style>

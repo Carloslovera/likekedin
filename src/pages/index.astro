@@ -1,11 +1,212 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import ProfileCard from '../components/ProfileCard.astro';
+import Footer from '../components/Footer.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import profesionales from '../data/profesionales.json';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="FindMe! — Red Profesional">
+
+  <Navbar />
+
+  <main class="home">
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="hero-content">
+
+
+        <h1>
+          Profesionales.<br />
+          <span>Proyectos. Tecnología.</span>
+        </h1>
+
+        <p>
+          Una red profesional para descubrir talento,
+          compartir conocimientos y conectar personas
+          del mundo del desarrollo de software.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="#profesionales" class="btn-secondary">
+            Ver perfiles
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+        <!-- BUSCADOR -->
+
+    <section class="search-section">
+
+      <div class="search-box">
+
+        <span>⌕</span>
+
+        <input
+          type="search"
+          placeholder="Buscar por nombre, cargo o tecnología..."
+          aria-label="Buscar profesionales"
+        />
+
+      </div>
+
+    </section>
+
+
+    <!-- PROFESIONALES -->
+    <section
+      id="profesionales"
+      class="professionals-section"
+    >
+
+      <div class="section-heading">
+
+        <div>
+
+          <h2>
+            Profesionales destacados
+          </h2>
+        </div>
+
+
+      </div>
+
+
+      <div class="professionals-grid">
+
+        {profesionales.map((profesional) => (
+          <ProfileCard {...profesional} />
+        ))}
+
+      </div>
+
+    </section>
+
+
+    <!-- TECNOLOGIAS -->
+    <section class="technologies">
+
+      <span>TECNOLOGÍAS DE LA RED</span>
+
+      <div class="technology-list">
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <Footer />
+
 </Layout>
+
+<style>
+
+    .hero {
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #666;
+
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #666;
+  }
+  p {
+    font-size: 16px;
+    color: #666;
+  }
+
+  .hero-actions {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+
+.home {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+
+  /* =========================
+     BUSCADOR
+  ========================= */
+
+  .search-section {
+
+    margin-bottom: 16px;
+
+  }
+
+  .search-box {
+
+    position: relative;
+
+  }
+
+  .search-box input {
+
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 18px 0 45px;
+
+    background: #111;
+
+    border: 1px solid #292929;
+
+    border-radius: 8px;
+
+    color: #f5f5f5;
+
+    outline: none;
+
+    font-size: 13px;
+
+  }
+
+  .search-box input::placeholder {
+
+    color: #555;
+
+  }
+
+  .search-box input:focus {
+
+    border-color: #444;
+
+  }
+
+  .search-box span {
+
+    position: absolute;
+
+    left: 16px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #666;
+
+    font-size: 19px;
+
+  }
+
+</style>

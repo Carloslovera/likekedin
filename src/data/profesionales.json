@@ -1,0 +1,84 @@
+[
+  {
+    "id": "maria-lopez",
+    "nombre": "Maria Lopez",
+    "cargo": "Project Manager / Scrum Master",
+    "ubicacion": "Argentina",
+    "foto": "https://i.pravatar.cc/300?img=1",
+    "bio": "Liderazgo natural y capacidad para organizar tareas, gestionar tiempos del equipo y coordinar el backlog del proyecto.",
+    "skills": [
+      "Project Management",
+      "Scrum",
+      "Agile",
+      "Liderazgo"
+    ],
+    "linkedin": "",
+    "email": "maria.lopez@nextbytesolutions.com"
+  },
+  {
+    "id": "matias-contreras",
+    "nombre": "Matias Contreras",
+    "cargo": "Desarrollador Frontend",
+    "ubicacion": "Argentina",
+    "foto": "https://i.pravatar.cc/300?img=2",
+    "bio": "Interés y experiencia previa en el desarrollo de interfaces de usuario y tecnologías web visuales.",
+    "skills": [
+      "React",
+      "JavaScript",
+      "HTML/CSS",
+      "UI Development"
+    ],
+    "linkedin": "",
+    "email": "matias.contreras@nextbytesolutions.com"
+  },
+  {
+    "id": "luis-barnabo",
+    "nombre": "Luis Victor Hugo Barnabo",
+    "cargo": "Desarrollador Backend",
+    "ubicacion": "Argentina",
+    "foto": "https://i.pravatar.cc/300?img=3",
+    "bio": "Sólidos conocimientos en lógica de programación, bases de datos y arquitectura de sistemas.",
+    "skills": [
+      "Node.js",
+      "Python",
+      "SQL",
+      "API Design",
+      "Arquitectura"
+    ],
+    "linkedin": "",
+    "email": "luis.barnabo@nextbytesolutions.com"
+  },
+  {
+    "id": "lucas-blaci",
+    "nombre": "Lucas Ezequiel Blaci",
+    "cargo": "UX/UI Designer",
+    "ubicacion": "Argentina",
+    "foto": "https://i.pravatar.cc/300?img=4",
+    "bio": "Creatividad orientada a la experiencia de usuario y habilidad para el diseño de interfaces funcionales.",
+    "skills": [
+      "Figma",
+      "UX Design",
+      "Wireframes",
+      "Design System"
+    ],
+    "linkedin": "",
+    "email": "lucas.blaci@nextbytesolutions.com"
+  },
+  {
+    "id": "carlos-lovera",
+    "nombre": "Carlos Andres Lovera Rodriguez",
+    "cargo": "QA / Tester",
+    "ubicacion": "España",
+    "foto": "https://i.pravatar.cc/300?img=5",
+    "bio": "Atención al detalle y rigor metódico para asegurar la calidad y funcionamiento del producto.",
+    "skills": [
+      "Testing",
+      "QA",
+      "Java",
+      "SQL",
+      "Git"
+    ],
+    "linkedin": "",
+    "email": "carlos.lovera@nextbytesolutions.com"
+  }
+]
