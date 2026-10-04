@@ -4,7 +4,7 @@
     "nombre": "Maria Lopez",
     "cargo": "Project Manager / Scrum Master",
     "ubicacion": "Argentina",
-    "foto": "https://i.pravatar.cc/300?img=1",
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFJmqj14JhQrT38-WS197ZIt-DpjDqkN82IHU2TVkLnDX8YO_loxDP1lQ&s=10",
     "bio": "Liderazgo natural y capacidad para organizar tareas, gestionar tiempos del equipo y coordinar el backlog del proyecto.",
     "skills": [
       "Project Management",
@@ -20,7 +20,7 @@
     "nombre": "Matias Contreras",
     "cargo": "Desarrollador Frontend",
     "ubicacion": "Argentina",
-    "foto": "https://i.pravatar.cc/300?img=2",
+    "foto": "https://fotosantiguas.diariodemallorca.es/dm-contenido/uploads/2021/05/CARBONELL-VALLES-JAIME_00204.jpg",
     "bio": "Interés y experiencia previa en el desarrollo de interfaces de usuario y tecnologías web visuales.",
     "skills": [
       "React",
@@ -36,7 +36,7 @@
     "nombre": "Luis Victor Hugo Barnabo",
     "cargo": "Desarrollador Backend",
     "ubicacion": "Argentina",
-    "foto": "https://i.pravatar.cc/300?img=3",
+    "foto": "https://i.etsystatic.com/6093253/r/il/55bb37/8160510246/il_fullxfull.8160510246_irfi.jpg",
     "bio": "Sólidos conocimientos en lógica de programación, bases de datos y arquitectura de sistemas.",
     "skills": [
       "Node.js",
@@ -53,7 +53,7 @@
     "nombre": "Lucas Ezequiel Blaci",
     "cargo": "UX/UI Designer",
     "ubicacion": "Argentina",
-    "foto": "https://i.pravatar.cc/300?img=4",
+    "foto": "https://www.estelnegre.org/documents/gurnes/gurnes01.jpg",
     "bio": "Creatividad orientada a la experiencia de usuario y habilidad para el diseño de interfaces funcionales.",
     "skills": [
       "Figma",
@@ -69,7 +69,7 @@
     "nombre": "Carlos Andres Lovera Rodriguez",
     "cargo": "QA / Tester",
     "ubicacion": "España",
-    "foto": "https://i.pravatar.cc/300?img=5",
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/2/27/Manuel_G%C3%B3mez-Moreno_Gonz%C3%A1lez.jpg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original",
     "bio": "Atención al detalle y rigor metódico para asegurar la calidad y funcionamiento del producto.",
     "skills": [
       "Testing",
